@@ -1,0 +1,9 @@
+import hashlib
+
+password = input("Enter password: ")
+hashed = hashlib.sha256(password.encode()).hexdigest()
+
+if hashed == "your_saved_hash":
+    print("Login successful")
+else:
+    print("Wrong password")
